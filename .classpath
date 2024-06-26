@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Authentication/src/main/java"/>
+	<classpathentry kind="src" path="Authentication/src/test/java"/>
+	<classpathentry kind="src" path="CarePlan/src/main/java"/>
+	<classpathentry kind="src" path="CarePlan/src/test/java"/>
+	<classpathentry kind="src" path="Chat/src/main/java"/>
+	<classpathentry kind="src" path="Chat/src/test/java"/>
+	<classpathentry kind="src" path="Config-Server/src/main/java"/>
+	<classpathentry kind="src" path="Config-Server/src/test/java"/>
+	<classpathentry kind="src" path="Discovery/src/main/java"/>
+	<classpathentry kind="src" path="Discovery/src/test/java"/>
+	<classpathentry kind="src" path="Gateway/src/main/java"/>
+	<classpathentry kind="src" path="Gateway/src/test/java"/>
+	<classpathentry kind="src" path="Parameterization/src/main/java"/>
+	<classpathentry kind="src" path="Parameterization/src/test/java"/>
+	<classpathentry kind="lib" path="Authentication/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="CarePlan/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="Chat/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="Config-Server/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="Discovery/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="Gateway/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="Parameterization/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="target/Setting-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

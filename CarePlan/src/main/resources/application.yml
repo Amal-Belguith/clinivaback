@@ -1,0 +1,50 @@
+eureka:
+  instance:
+    hostname: localhost
+
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+server:
+  port: 8092
+spring:
+  application:
+    name: CarePlan
+  config:
+    import: optional:configserver:http://localhost:8888
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/clinivia?useSSL=false
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: amalbelguith00@gmail.com
+    password: lpza dpxr rpjy ykpb
+    properties:
+      mail:
+        smtp:
+          ssl:
+            trust: smtp.gmail.com
+          auth: true
+          starttls:
+            enable: true
+            required: true
+application:
+  config:
+    Allergies-url: http://localhost:8090/allergies

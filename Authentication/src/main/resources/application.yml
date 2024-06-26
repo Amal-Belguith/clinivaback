@@ -1,0 +1,46 @@
+eureka:
+   instance:
+      hostname: localhost
+
+   client:
+    service-url:
+        defaultZone: http://localhost:8761/eureka
+server:
+   port: 8091
+spring:
+   application:
+     name: Authentication
+   datasource:
+     driver-class-name: com.mysql.cj.jdbc.Driver
+     url: jdbc:mysql://localhost:3306/clinivia?useSSL=false
+     username: root
+     password:
+   jpa:
+     hibernate:
+        ddl-auto: update
+     database: mysql
+     database-platform: org.hibernate.dialect.MySQLDialect
+   mail:
+     host: smtp.gmail.com
+     port: 587
+     username: amalbelguith00@gmail.com
+     password: lpza dpxr rpjy ykpb
+     properties:
+       mail:
+         smtp:
+           ssl:
+             trust: smtp.gmail.com
+           auth: true
+           starttls:
+             enable: true
+             required: true
+
+application:
+  security:
+    jwt:
+       secret-key: "eba97996199b91fbda05cd1f2a3c8a1f1aef97ec69dd47acd470a4e28d1c8027"
+       expiration: 86400000 # a day
+       refresh-token:
+         expiration: 604800000 # 7 days
+
+

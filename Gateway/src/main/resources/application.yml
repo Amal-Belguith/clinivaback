@@ -1,0 +1,45 @@
+server:
+  port: 8093
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedHeaders:
+              - Content-Type
+            allowCredentials: true
+            allowedMethods: "*"
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      mvc:
+       routes:
+        - id: parameterization
+          uri: lb://Parameterization
+          predicates:
+            - Path=/parameterization/**
+        - id: careplan
+          uri: lb://CarePlan
+          predicates:
+            - Path=/careplan/**
+      default-filters:
+        - name: Cors
+          args:
+            allowedOrigins: "'*'"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+            allowCredentials: true
+eureka:
+  instance:
+    hostname: localhost
+
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
